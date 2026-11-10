@@ -36,7 +36,7 @@ Restart Windows after you apply or restore changes.
 |---|---|
 | [scripts/01-Telemetry.ps1](scripts/01-Telemetry.ps1) | Sets diagnostic data policies to the lowest level, disables the `DiagTrack` and `dmwappushservice` services, CEIP, inventory, Windows Error Reporting, feedback prompts and tailored experiences, and turns off telemetry scheduled tasks. Also opts out of PowerShell 7 and .NET CLI telemetry. |
 | [scripts/02-Privacy.ps1](scripts/02-Privacy.ps1) | Disables the advertising ID, activity history/Timeline, cross-device clipboard, online speech, inking and typing personalization, location, Find My Device, Bing/web and cloud search, search history and highlights, app-launch tracking and Delivery Optimization peer-to-peer upload. |
-| [scripts/03-Ads.ps1](scripts/03-Ads.ps1) | Disables Start, Settings and lock screen suggestions, tips, Spotlight, silently installed or promoted apps, OneDrive/M365 ads in File Explorer, account nags, the "finish setting up" screen and Widgets/News. |
+| [scripts/03-Ads.ps1](scripts/03-Ads.ps1) | Disables Start, Settings and lock screen suggestions, tips, Spotlight, silently installed or promoted apps, OneDrive/M365 ads in File Explorer, account nags and the "finish setting up" screen. |
 | [scripts/04-AI.ps1](scripts/04-AI.ps1) | Disables Windows Copilot, Recall and Click to Do. The optional `-RemoveCopilotApp` switch uninstalls the Copilot app, and `Restore.ps1` cannot undo that. |
 | [scripts/05-Edge.ps1](scripts/05-Edge.ps1) | Sets Edge policies to turn off diagnostic data, ad personalization, shopping, Rewards, promotions, new tab page content, the sidebar and Copilot. It also enables Do Not Track and **strict** tracking prevention. |
 

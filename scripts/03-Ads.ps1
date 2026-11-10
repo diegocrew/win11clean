@@ -1,7 +1,7 @@
 #Requires -RunAsAdministrator
 <#
 .SYNOPSIS
-    Removes ads, "suggestions", tips, promoted apps, Spotlight and Widgets/News from Windows 11.
+    Removes ads, "suggestions", tips, promoted apps, Spotlight and account nags from Windows 11.
 #>
 [CmdletBinding()]
 param([switch]$DryRun)
@@ -56,8 +56,5 @@ Set-RegValue $adv 'ShowSyncProviderNotifications' 0  # OneDrive/M365 ads in File
 Set-RegValue 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer' 'HideRecommendedPersonalizedSites' 1
 Set-RegValue 'HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement' 'ScoobeSystemSettingEnabled' 0
 Set-RegValue 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Notifications\Settings\Windows.SystemToast.Suggested' 'Enabled' 0
-
-Write-Section 'Widgets / News and Interests'
-Set-RegValue 'HKLM:\SOFTWARE\Policies\Microsoft\Dsh' 'AllowNewsAndInterests' 0
 
 Complete-W11Clean
